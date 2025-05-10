@@ -1,0 +1,157 @@
+
+
+body {
+    background-color: #A31621;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 50px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 14px;
+}
+
+.profile span {
+    color: white;
+    font-size: 1em;
+    font-family: 'Segoe UI';
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #fff;
+    color: #A31621;
+}
+.footer-content {
+    color: white;
+    padding: 20px;
+
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.Login {
+    background-color: #A31621;
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: .5px 4px 8px rgba(255, 255, 255, 0.822);
+    text-align: center;
+}
+
+.Login h2 {
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.Login label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 1em;
+    font-family: 'Segoe UI';
+    text-align: left;
+    margin-top: 15px;
+}
+
+.Login input[type="text"],
+.Login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 0px;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.Login input[type="submit"] {
+    background-color: #A31621;
+    color: #ffffff;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.Login input[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #A31621;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;    }
+
+    .navbar ul {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .profile {
+        margin-bottom: 10px;
+    }
+
+    .Login {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-top: 30px;
+    }
+
+    .profile img {
+        height: 30px;
+        width: 30px;
+    }
+}

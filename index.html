@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="profile">
+            <img src="F:\Media\Pics\wallpaper\download.jpeg" alt="Profile Picture">
+            <span>Ammar Abu Hurraira</span>
+        </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1 id="b">Welcome to My Portfolio</h1>
+    </div>
+    
+    <div class="Login">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <p id="loginMessage" style="color: red; margin-top: 10px;"></p>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            All rights reserved &copy; 2025 Ammar Abu Hurraira
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for handling login
+        const loginForm = document.getElementById('loginForm');
+        const loginMessage = document.getElementById('loginMessage');
+
+        // Simulated database of users
+        const users = [
+            { username: 'Hurraira', password: '090604' },
+            { username: 'Haseeb', password: '33092' }
+        ];
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Check if the username and password match any user in the database
+            const user = users.find(user => user.username === username && user.password === password);
+
+        if (user) {
+          alert(`Login successful! Welcome, ${username}.`); // Show success message in a pop-up
+        } else {
+          alert('Invalid username or password.'); // Show error message in a pop-up
+        }
+        });
+
+    </script>
+</body>
+</html>
